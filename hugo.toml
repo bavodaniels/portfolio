@@ -1,0 +1,4 @@
+baseURL = 'https://bavodaniels.be/'
+languageCode = 'en-us'
+title = 'Bavo Daniels - Software Engineer'
+theme = 'bavo'
