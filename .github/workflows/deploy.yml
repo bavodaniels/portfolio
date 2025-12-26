@@ -32,7 +32,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v4
         with:
           # The ARN provided by the user.
-          role-to-assume: arn:aws:iam::310078062233:oidc-provider/token.actions.githubusercontent.com
+          role-to-assume: arn:aws:iam::310078062233:role/Github-s3
           aws-region: eu-west-1
 
       - name: Deploy to S3
