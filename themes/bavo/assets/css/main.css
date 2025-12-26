@@ -42,6 +42,34 @@
             height: fit-content;
         }
 
+        @media (max-width: 1024px) {
+            .grid-layout {
+                grid-template-columns: 1fr;
+                gap: 50px;
+                padding: 50px 0;
+            }
+
+            .left-column {
+                position: relative;
+                top: 0;
+                height: auto;
+                margin-bottom: 40px;
+            }
+            
+            .container {
+                padding: 0 25px;
+            }
+            
+            section {
+                margin-bottom: 60px;
+                scroll-margin-top: 60px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+
         h1 {
             font-size: 3rem;
             font-weight: 700;
