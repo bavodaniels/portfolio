@@ -13,6 +13,9 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+      - name: Clean workspace                                             │
+        run: find . -mindepth 1 -delete
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
