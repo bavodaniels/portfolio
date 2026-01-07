@@ -2,12 +2,26 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-HDYRJJKE9Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
+  function gtag() { dataLayer.push(arguments); }
   gtag('js', new Date());
 
   gtag('config', 'G-HDYRJJKE9Q');
 </script>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+<meta name="description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+<link rel="canonical" href="{{ .Permalink }}" />
+
+<!-- Open Graph -->
+<meta property="og:title" content="{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+<meta property="og:description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+<meta property="og:image"
+  content="{{ with .Params.image }}{{ . | absURL }}{{ else }}{{ with .Site.Params.defaultImage }}{{ . | absURL }}{{ end }}{{ end }}" />
+
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
