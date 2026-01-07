@@ -55,7 +55,7 @@
                     <div class="date">{{ .Params.timeframe}}</div>
                     <div class="experience-content">
                         <h3>{{ .Params.Role }} | {{ .Params.Company }}</h3>
-                        <p class="description">{{ .Content }}</p>
+                        <div class="description">{{ .Content }}</div>
                         <div class="tags">
                             {{ with .Params.tags }}
                             {{ range . }}
