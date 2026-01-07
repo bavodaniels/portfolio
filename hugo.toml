@@ -1,4 +1,12 @@
 baseURL = 'https://bavodaniels.be/'
 languageCode = 'en-us'
-title = 'Bavo Daniels - Software Engineer'
+title = 'Bavo Daniels'
 theme = 'bavo'
+
+[params]
+  description = 'Backend specialist with expertise in distributed systems and cloud architecture'
+  role = 'Software Engineer'
+  tagline = 'Backend specialist with expertise in distributed systems and cloud architecture'
+  github = 'https://github.com/bavodaniels'
+  linkedin = 'https://linkedin.com/in/bavo-daniels-ba1a058a'
+  resume = '/resume.pdf'
